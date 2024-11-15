@@ -53,6 +53,7 @@ export class HolocureMainContent extends LitElement {
 
   render() {
     return html`
+      <section id="top">
       <h1>Holocure Randomizer Tool</h1>
       <button @click=${this.roll}>Roll</button>
       ${this.selected in talents ? html`
@@ -61,6 +62,7 @@ export class HolocureMainContent extends LitElement {
         <img src=${talents[this.selected].full}/>
       </article>` : nothing
       }
+      </section>
       <section id="bottom">
         <holocure-talent-gallery enabled=${this.enabled}></holocure-talent-gallery>
         <footer>Not affiliated in any way with Hololive, Cover Corp., or the HoloCure team. Art from the HoloCure game.</footer>
@@ -70,23 +72,40 @@ export class HolocureMainContent extends LitElement {
 
   static styles = css`
     :host {
-      max-width: 1280px;
-      margin: 0 auto;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
       text-align: center;
+      display:flex;
+      flex-direction: column;
+      justify-content:space-between;
+    }
+
+    #top {
+      flex-grow: 1;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      > article {
+        container-type: size;
+        align-self: stretch;
+        flex-grow: 1;
+        > h2 {
+          margin-block: 1rem;
+        }
+        > img {
+          @container (height > 400px){
+            height: calc(100cqh - 5.25rem);
+            max-height: 450px;
+            image-rendering: crisp-edges;
+          }
+        }
+      }
     }
 
     h1 {
       font-size: 3.2em;
       line-height: 1.1;
-    }
-
-    a {
-      font-weight: 500;
-      color: #646cff;
-      text-decoration: inherit;
-    }
-    a:hover {
-      color: #535bf2;
     }
 
     button {
@@ -125,10 +144,7 @@ export class HolocureMainContent extends LitElement {
     }
 
     #bottom {
-      position: fixed;
-      bottom:0;
-      left: 0;
-      width: 100vw;
+      align-self: stretch;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;

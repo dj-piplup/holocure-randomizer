@@ -4,7 +4,7 @@ export type Talent = {
   full: `${string}_Full.webp`;
 };
 
-export const rows = [10,10,9,9];
+export const rows = [10,10,9,9,9];
 
 export const talents: Talent[] = [
   {
@@ -188,5 +188,50 @@ export const talents: Talent[] = [
     name: "Vestia Zeta",
     icon: "assets/Vestia_Zeta_Icon.webp",
     full: "assets/Vestia_Zeta_Full.webp",
+  },
+  {
+    name: "Usada Pekora",
+    icon: "assets/Usada_Pekora_Icon.webp",
+    full: "assets/Usada_Pekora_Full.webp",
+  },
+  {
+    name: "Houshou_Marine",
+    icon: "assets/Houshou_Marine_Icon.webp",
+    full: "assets/Houshou_Marine_Full.webp",
+  },
+  {
+    name: "Shirogane Noel",
+    icon: "assets/Shirogane_Noel_Icon.webp",
+    full: "assets/Shirogane_Noel_Full.webp",
+  },
+  {
+    name: "Shiranui Flare",
+    icon: "assets/Shiranui_Flare_Icon.webp",
+    full: "assets/Shiranui_Flare_Full.webp",
+  },
+  {
+    name: "Kiryu Coco",
+    icon: "assets/Kiryu_Coco_Icon.webp",
+    full: "assets/Kiryu_Coco_Full.webp",
+  },
+  {
+    name: "Amane Kanata",
+    icon: "assets/Amane_Kanata_Icon.webp",
+    full: "assets/Amane_Kanata_Full.webp",
+  },
+  {
+    name: "Tokoyami Towa",
+    icon: "assets/Tokoyami_Towa_Icon.webp",
+    full: "assets/Tokoyami_Towa_Full.webp",
+  },
+  {
+    name: "Tsunomaki Watame",
+    icon: "assets/Tsunomaki_Watame_Icon.webp",
+    full: "assets/Tsunomaki_Watame_Full.webp",
+  },
+  {
+    name: "Himemori Luna",
+    icon: "assets/Himemori_Luna_Icon.webp",
+    full: "assets/Himemori_Luna_Full.webp",
   },
 ];
