@@ -20,7 +20,6 @@ export class HolocureDialogue extends LitElement {
   get dialogEl(){
     if(!this._dialogEl){
       const el = this.shadowRoot?.querySelector('dialog') ?? undefined;
-      console.log(el);
       if(el){
         this._dialogEl = el;
       }
