@@ -51,10 +51,15 @@ export class HolocureMainContent extends LitElement {
     document.removeEventListener('holocure-talent-toggle', this.handleToggle.bind(this))
   }
 
+  openDialogue(){
+    document.dispatchEvent(new CustomEvent('holocure-open-dialogue'));
+  }
+
   render() {
     return html`
       <section id="top">
       <h1>Holocure Randomizer Tool</h1>
+      <p>Note: random character selection is back in the game <a href='#' @click=${this.openDialogue}>(more)</a></p>
       <button @click=${this.roll}>Roll</button>
       ${this.selected in talents ? html`
       <article>
@@ -106,6 +111,7 @@ export class HolocureMainContent extends LitElement {
     h1 {
       font-size: 3.2em;
       line-height: 1.1;
+      margin-bottom: 0rem;
     }
 
     button {
@@ -155,5 +161,8 @@ export class HolocureMainContent extends LitElement {
 declare global {
   interface HTMLElementTagNameMap {
     'holocure-main-content': HolocureMainContent
+  }
+  interface DocumentEventMap {
+    'holocure-open-dialogue': CustomEvent<void>
   }
 }
