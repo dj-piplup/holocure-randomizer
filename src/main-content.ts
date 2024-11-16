@@ -79,6 +79,15 @@ export class HolocureMainContent extends LitElement {
     :host {
       margin: 0;
       height: 100vh;
+      @media screen and (max-width:810px){
+        min-height: calc(460px + 45vw);
+      }
+      @media screen and (max-width: 610px){
+        min-height: 700px;
+      }
+      @media screen and (min-width:810px){
+        min-height: 850px;
+      }
       width: 100vw;
       text-align: center;
       display:flex;
@@ -99,7 +108,8 @@ export class HolocureMainContent extends LitElement {
           margin-block: 1rem;
         }
         > img {
-          @container (height > 400px){
+          min-height: 200px;
+          @container (height > 0){
             height: calc(100cqh - 5.25rem);
             max-height: 450px;
             image-rendering: crisp-edges;
@@ -111,7 +121,7 @@ export class HolocureMainContent extends LitElement {
     h1 {
       font-size: 3.2em;
       line-height: 1.1;
-      margin-bottom: 0rem;
+      margin-block: 1rem 0rem;
     }
 
     button {
@@ -135,6 +145,13 @@ export class HolocureMainContent extends LitElement {
 
     holocure-talent-gallery {
       min-width:max-content;
+      --img-width: 4.5rem;
+      @media screen and (max-width: 810px){
+        --img-width: 8.8vw;
+      }
+      @media screen and (max-width: 610px){
+        display: none;
+      }
     }
 
     footer {

@@ -49,8 +49,8 @@ export class HolocureTalentGallery extends LitElement {
       align-items:center;
     }
     img {
-      height: 3rem;
-      width: 4.5rem;
+      height: calc(var(--img-width) * 2 / 3);
+      width: var(--img-width);
       object-fit: cover;
       border: .15rem solid #555;
       cursor: pointer;
