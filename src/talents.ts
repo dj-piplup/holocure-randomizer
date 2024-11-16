@@ -195,7 +195,7 @@ export const talents: Talent[] = [
     full: "assets/Usada_Pekora_Full.webp",
   },
   {
-    name: "Houshou_Marine",
+    name: "Houshou Marine",
     icon: "assets/Houshou_Marine_Icon.webp",
     full: "assets/Houshou_Marine_Full.webp",
   },
